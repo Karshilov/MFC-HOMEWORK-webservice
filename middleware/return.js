@@ -5,7 +5,7 @@
 module.exports = async (ctx, next) => {
 
     // 不要使用这个对流程控制具有迷惑性的 API，请直接用 throw 代替
-    ctx.throw = (code) => { throw code , // console.log(code)}
+    ctx.throw = (code) => { throw code , console.log(code)}
     try {
       await next()
     } catch (e) {
